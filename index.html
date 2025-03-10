@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- 
-    TechVision - 创新科技初创团队
+    MoneyRobber - 创新科技初创团队
 -->
 <html lang="zh-CN">
 <head>
@@ -54,11 +54,38 @@
         .btn:hover {
             color: var(--accent-color);
         }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Position the tooltip above the text */
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="logo">TechVision</h1>
+        <h1 class="logo">MoneyRobber</h1>
         <nav>
             <a href="html/about.html" class="btn">关于我们</a>
             <a href="html/features.html" class="btn">我们的优势</a>

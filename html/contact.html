@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>联系我们 - TechVision</title>
+    <title>联系我们 - MoneyRobber</title>
     <style>
         :root {
             --primary-color: #ffffff;
@@ -130,12 +130,39 @@
                 flex-direction: column;
             }
         }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Position the tooltip above the text */
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo">TechVision</div>
+            <div class="logo">MoneyRobber</div>
             <div class="tagline">联系我们</div>
         </div>
     </header>
@@ -144,7 +171,7 @@
         <div class="container">
             <h2 class="section-title">联系我们</h2>
             <div style="text-align: center;">
-                <p>我们期待与您合作，共同探索科技创新的无限可能。</p>
+                <p>Give Me Your Money!</p>
                 <a href="mailto:alfredyuan66@outlook.com" class="btn">发送邮件</a>
             </div>
         </div>
@@ -152,19 +179,31 @@
     
     <footer>
         <div class="container">
-            <div class="logo">TechVision</div>
+            <div class="logo">MoneyRobber</div>
             <div class="contact-info">
                 <p>地址：北京市海淀区门前大桥下</p>
-                <p>电话：+86 10 8888 8888</p>
+                <p>电话：+86 15568200088</p>
                 <p>邮箱：alfredyuan66@outlook.com</p>
             </div>
             <div class="social-links">
-                <a href="#" aria-label="微信">微</a>
-                <a href="#" aria-label="微博">博</a>
-                <a href="#" aria-label="领英">领</a>
-                <a href="#" aria-label="GitHub">G</a>
+                <div class="tooltip">
+                    <a href="#" aria-label="微信">微</a>
+                    <span class="tooltiptext">微信号: nikebiewanle</span>
+                </div>
+                <div class="tooltip">
+                    <a href="#" aria-label="微博">博</a>
+                    <span class="tooltiptext">微博: nikebiewanle</span>
+                </div>
+                <div class="tooltip">
+                    <a href="#" aria-label="领英">领</a>
+                    <span class="tooltiptext">领英: nikebiewanle</span>
+                </div>
+                <div class="tooltip">
+                    <a href="#" aria-label="GitHub">G</a>
+                    <span class="tooltiptext">GitHub: qihao-yuan</span>
+                </div>
             </div>
-            <p style="margin-top: 20px;">&copy; 2025 TechVision. 保留所有权利。</p>
+            <p style="margin-top: 20px;">&copy; 2025 MoneyRobber. 保留所有权利。</p>
         </div>
     </footer>
 </body>

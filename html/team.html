@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我们的团队 - TechVision</title>
+    <title>我们的团队 - MoneyRobber</title>
     <style>
         :root {
             --primary-color: #ffffff;
@@ -138,12 +138,39 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Position the tooltip above the text */
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo">TechVision</div>
+            <div class="logo">MoneyRobber</div>
             <div class="tagline">我们的团队</div>
         </div>
     </header>
@@ -157,9 +184,9 @@
                             <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
                         </svg>
                     </div>
-                    <div class="member-name">张三</div>
+                    <div class="member-name">袁启皓</div>
                     <div class="member-role">创始人 & CEO</div>
-                    <p>拥有10年科技行业经验，曾在多家知名科技公司担任领导职务。</p>
+                    <p>拥有0年科技行业经验，曾在0家知名科技公司担任0导职务。末流985苦逼学生一枚</p>
                 </div>
                 <div class="team-member">
                     <div class="member-img">
@@ -167,9 +194,9 @@
                             <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
                         </svg>
                     </div>
-                    <div class="member-name">李四</div>
-                    <div class="member-role">CTO</div>
-                    <p>技术专家，专注于人工智能和机器学习领域，拥有多项技术专利。</p>
+                    <div class="member-name">信子栋</div>
+                    <div class="member-role">创始人 & CTO</div>
+                    <p>安井鱼丸坚实拥护者，香港大学潇洒哥，技术砖家，专注于金融和量化交易领域，拥有不知道多少项技术专利。</p>
                 </div>
                 <div class="team-member">
                     <div class="member-img">
@@ -177,9 +204,9 @@
                             <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
                         </svg>
                     </div>
-                    <div class="member-name">王五</div>
-                    <div class="member-role">设计总监</div>
-                    <p>资深用户体验设计师，致力于创造简洁、直观且美观的用户界面。</p>
+                    <div class="member-name">这个人完全可以是你！</div>
+                    <div class="member-role">职位你自己选咯</div>
+                    <p>资深摸鱼老玩家，致力于摸成一个摸鱼大师。</p>
                 </div>
             </div>
         </div>
@@ -187,19 +214,31 @@
     
     <footer>
         <div class="container">
-            <div class="logo">TechVision</div>
+            <div class="logo">MoneyRobber</div>
             <div class="contact-info">
                 <p>地址：北京市海淀区门前大桥下</p>
-                <p>电话：+86 10 8888 8888</p>
+                <p>电话：+86 15568200088</p>
                 <p>邮箱：alfredyuan66@outlook.com</p>
             </div>
             <div class="social-links">
-                <a href="#" aria-label="微信">微</a>
-                <a href="#" aria-label="微博">博</a>
-                <a href="#" aria-label="领英">领</a>
-                <a href="#" aria-label="GitHub">G</a>
+                <div class="tooltip">
+                    <a href="#" aria-label="微信">微</a>
+                    <span class="tooltiptext">微信号: nikebiewanle</span>
+                </div>
+                <div class="tooltip">
+                    <a href="#" aria-label="微博">博</a>
+                    <span class="tooltiptext">微博: nikebiewanle</span>
+                </div>
+                <div class="tooltip">
+                    <a href="#" aria-label="领英">领</a>
+                    <span class="tooltiptext">领英: nikebiewanle</span>
+                </div>
+                <div class="tooltip">
+                    <a href="#" aria-label="GitHub">G</a>
+                    <span class="tooltiptext">GitHub: qihao-yuan</span>
+                </div>
             </div>
-            <p style="margin-top: 20px;">&copy; 2025 TechVision. 保留所有权利。</p>
+            <p style="margin-top: 20px;">&copy; 2025 MoneyRobber. 保留所有权利。</p>
         </div>
     </footer>
 </body>
