@@ -7,6 +7,6 @@
     "build": "your-build-command"
   },
   "dependencies": {
-    "your-dependencies": "^version"
+    "your-dependencies": "^1.0.0"
   }
 }
