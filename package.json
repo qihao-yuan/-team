@@ -1,0 +1,12 @@
+{
+  "name": "team",
+  "version": "1.0.0",
+  "description": "A website that introduces our team.",
+  "main": "index.js",
+  "scripts": {
+    "build": "your-build-command"
+  },
+  "dependencies": {
+    "your-dependencies": "^version"
+  }
+}
