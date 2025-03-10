@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- 
+    TechVision - 创新科技初创团队
+-->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你好呀</title>
+    <style>
+        :root {
+            --primary-color: #ffffff;
+            --secondary-color: #000000;
+            --accent-color: #536465;
+            --text-color: #ecf0f1;
+            --light-bg: linear-gradient(135deg, #2c3e50, #1c1c1c);
+            --dark-bg: linear-gradient(135deg, #000000, #434343);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            color: var(--text-color);
+            background: var(--dark-bg);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            color: var(--primary-color);
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            background: none;
+            font-size: 1.2rem;
+        }
+        
+        .btn:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo">TechVision</h1>
+        <nav>
+            <a href="about.html" class="btn">关于我们</a>
+            <a href="features.html" class="btn">我们的优势</a>
+            <a href="team.html" class="btn">我们的团队</a>
+            <a href="contact.html" class="btn">联系我们</a>
+        </nav>
+    </div>
+</body>
+</html>
