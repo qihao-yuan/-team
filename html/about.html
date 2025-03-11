@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>关于我们 - MoneyRobber</title>
+    <title>About Us - FimaTech</title>
     <style>
         :root {
             --primary-color: #ffffff;
@@ -183,13 +183,48 @@
             visibility: visible;
             opacity: 1;
         }
+
+        .nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--secondary-color);
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        }
+
+        .nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .nav a.current {
+            color: var(--accent-color);
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo">MoneyRobber</div>
+            <div class="logo">FimaTech</div>
             <div class="tagline">关于我们</div>
+            <div class="nav">
+                <a href="../index.html">主页</a>
+                <a href="about.html" class="current">关于我们</a>
+                <a href="features.html">我们的优势</a>
+                <a href="team.html">我们的团队</a>
+                <a href="contact.html">联系我们</a>
+                <a href="products.html">我们的产品</a>
+            </div>
         </div>
     </header>
     
@@ -213,7 +248,7 @@
     
     <footer>
         <div class="container">
-            <div class="logo">MoneyRobber</div>
+            <div class="logo">FimaTech</div>
             <div class="contact-info">
                 <p>地址：北京市海淀区门前大桥下</p>
                 <p>电话：+86 15568200088</p>
@@ -237,8 +272,18 @@
                     <span class="tooltiptext">GitHub: qihao-yuan</span>
                 </div>
             </div>
-            <p style="margin-top: 20px;">&copy; 2025 MoneyRobber. 保留所有权利。</p>
+            <p style="margin-top: 20px;">&copy; 2025 FimaTech. 保留所有权利。</p>
         </div>
     </footer>
+    <script>
+        function toggleNav() {
+            const nav = document.getElementById('hiddenNav');
+            if (nav.style.display === 'none' || nav.style.display === '') {
+                nav.style.display = 'block';
+            } else {
+                nav.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>

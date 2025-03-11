@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - FimaTech</title>
+    <title>Products - FimaTech</title>
     <style>
         :root {
             --primary-color: #ffffff;
@@ -55,25 +55,6 @@
             opacity: 0.9;
         }
         
-        .btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--primary-color);
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            margin-top: 20px; /* Add margin-top to move the button down */
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
         section {
             padding: 80px 0;
         }
@@ -92,6 +73,31 @@
             height: 3px;
             background-color: var(--primary-color);
             margin: 15px auto;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            background-color: rgba(255,255,255,0.1);
+            transform: translateY(-5px);
+        }
+        
+        .product-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
         }
         
         footer {
@@ -126,12 +132,6 @@
             transform: translateY(-3px);
         }
         
-        @media (max-width: 768px) {
-            .about-content {
-                flex-direction: column;
-            }
-        }
-
         .tooltip {
             position: relative;
             display: inline-block;
@@ -157,6 +157,12 @@
         .tooltip:hover .tooltiptext {
             visibility: visible;
             opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .nav {
@@ -191,24 +197,37 @@
     <header>
         <div class="container">
             <div class="logo">FimaTech</div>
-            <div class="tagline">联系我们</div>
+            <div class="tagline">我们的产品</div>
             <div class="nav">
                 <a href="../index.html">主页</a>
                 <a href="about.html">关于我们</a>
                 <a href="features.html">我们的优势</a>
                 <a href="team.html">我们的团队</a>
-                <a href="contact.html" class="current">联系我们</a>
-                <a href="products.html">我们的产品</a>
+                <a href="contact.html">联系我们</a>
+                <a href="products.html" class="current">我们的产品</a>
             </div>
         </div>
     </header>
     
-    <section id="contact">
+    <section id="products">
         <div class="container">
-            <h2 class="section-title">联系我们</h2>
-            <div style="text-align: center;">
-                <p>Contact Us</p>
-                <a href="mailto:alfredyuan66@outlook.com" class="btn">发送邮件</a>
+            <h2 class="section-title">我们的产品</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">📈</div>
+                    <h3>量化交易系统</h3>
+                    <p>我们开发了一套高效的量化交易系统，帮助用户实现自动化交易和风险管理。</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">💼</div>
+                    <h3>金融分析平台</h3>
+                    <p>我们的金融分析平台提供了全面的数据分析工具，帮助用户做出明智的投资决策。</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🔒</div>
+                    <h3>安全支付解决方案</h3>
+                    <p>我们提供安全可靠的支付解决方案，保障用户的交易安全。</p>
+                </div>
             </div>
         </div>
     </section>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <!-- 
-    MoneyRobber - 创新科技初创团队
+        FimaTech - Financial Problem, Mathematical Solution
 -->
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>We Are MoneyRobber</title>
+    <title>FimaTech - Financial Problem, Mathematical Solution</title>
     <style>
         :root {
             --primary-color: #ffffff;
@@ -36,6 +36,11 @@
         
         .container {
             text-align: center;
+            margin-bottom: 50px; /* 增加底部外边距 */
+        }
+
+        .logo {
+            margin-bottom: 30px; /* 增加底部外边距 */
         }
         
         .btn {
@@ -81,17 +86,69 @@
             visibility: visible;
             opacity: 1;
         }
+
+        .meteor {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            box-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color), 0 0 30px var(--accent-color);
+        }
+
+        .trail {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            box-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color), 0 0 30px var(--accent-color);
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="logo">MoneyRobber</h1>
+        <h1 class="logo">FimaTech</h1>
         <nav>
-            <a href="html/about.html" class="btn">关于我们</a>
-            <a href="html/features.html" class="btn">我们的优势</a>
-            <a href="html/team.html" class="btn">我们的团队</a>
-            <a href="html/contact.html" class="btn">联系我们</a>
+            <a href="html/about.html" class="btn">About Us</a>
+            <a href="html/features.html" class="btn">Our Advantages</a>
+            <a href="html/team.html" class="btn">Our Team</a>
+            <a href="html/products.html" class="btn">Products</a>
+            <a href="html/contact.html" class="btn">Contact Us</a>
         </nav>
     </div>
+    <div class="meteor" id="meteor"></div>
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const meteor = document.getElementById('meteor');
+            meteor.style.left = e.pageX + 'px';
+            meteor.style.top = e.pageY + 'px';
+            meteor.style.opacity = 1;
+            meteor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            setTimeout(() => {
+                meteor.style.opacity = 0;
+                meteor.style.transform = 'translate(-50%, -50%) scale(1)';
+            }, 300);
+
+            const trail = document.createElement('div');
+            trail.className = 'trail';
+            trail.style.left = e.pageX + 'px';
+            trail.style.top = e.pageY + 'px';
+            document.body.appendChild(trail);
+            setTimeout(() => {
+                trail.style.opacity = 0;
+                trail.style.transform = 'translate(-50%, -50%) scale(1)';
+                setTimeout(() => {
+                    trail.remove();
+                }, 300);
+            }, 300);
+        });
+    </script>
 </body>
 </html>
